@@ -1,4 +1,4 @@
-import 'package:coffeeapp/pages/HomePage.dart';
+import 'package:coffeeapp/pages/MainLayout.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: MainLayout(),
     );
   }
 }
