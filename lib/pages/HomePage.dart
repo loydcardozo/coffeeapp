@@ -1,5 +1,6 @@
 import 'package:coffeeapp/components/HomescreenBanner.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,6 +10,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  List<Map<String,String>> items =[
+    {
+      "Name" : "capucino",
+      "image" : "assets/images/"
+    },
+    {
+      "Name" : ""
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              Text('a good platform to book your coffee',
+              Text('A good platform to book your coffee',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -46,6 +57,21 @@ class _HomePageState extends State<HomePage> {
               ),
 
               HomeScreenBanner(),
+
+              SizedBox(height: 20,),
+
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Categories',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
+
             ],
           ),
         ),
